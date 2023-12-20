@@ -1,0 +1,55 @@
+/* languages.css */
+
+.dropdown-language {
+  position: absolute;
+  right: 60px;
+  top: 35px;
+  z-index: 5;
+  max-width: 110px;
+}
+.dropdown-language .dropdown-item {
+  color: whitesmoke;
+  border: 1px solid whitesmoke;
+  border-radius: 3px;
+  width: 70%;
+  display: flex;
+  align-items: center;
+  font-size: 0.85rem;
+  --bs-dropdown-link-active-bg: none;
+}
+.dropdown-language .dropdown-item:hover {
+  background-color: whitesmoke;
+  color: black;
+}
+.dropdown-language .dropdown-menu {
+  --bs-dropdown-bg: transparent;
+  --bs-dropdown-color: transparent;
+  --bs-dropdown-link-hover-bg: whitesmoke;
+  margin-left: 1px;
+}
+
+.dropdown-language .btn-secondary {
+  --bs-btn-bg: transparent;
+  border: 1px solid whitesmoke;
+  border-radius: 10px;
+  --bs-btn-hover-bg: whitesmoke;
+  --bs-btn-hover-color: black;
+}
+
+.dropdown-language .flag-icon {
+  width: 40%;
+  height: auto;
+}
+
+@media screen and (max-width: 599px) {
+  .dropdown-language .dropdown-item {
+    margin-left: 1px;
+    color: rgba(0, 0, 0, 1);
+    background-color: whitesmoke;
+    border-color: black;
+  }
+
+  .dropdown-language .btn-secondary {
+    font-size: 0.8rem;
+  }
+}

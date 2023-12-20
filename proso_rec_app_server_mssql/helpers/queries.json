@@ -1,0 +1,23 @@
+{
+  "getLatestRowQuery": "SELECT * FROM EnergyConsumptionTable WHERE SerialNo = @SerialNo AND DateColumn = (SELECT MAX(DateColumn) FROM EnergyConsumptionTable WHERE SerialNo = @SerialNo) ORDER BY DateColumn DESC;",
+
+  "insertEnergyQuery": "  INSERT INTO EnergyConsumptionTable (TesterName,SerialNo,ResultMin,ResultMax,TIName,ConditionSet,ConditionUnit,ResultConditionUnit,ResultValue,ResultUnit,TestTimeSet,TestTimeUnit,EvaporatorPan,DateColumn,UploadType) VALUES (@TesterName,@SerialNo,@ResultMin,@ResultMax,@TIName,@ConditionSet,@ConditionUnit,@ResultConditionUnit,@ResultValue,@ResultUnit,@TestTimeSet,@TestTimeUnit,@EvaporatorPan,@DateColumn,@UploadType);",
+
+  "deleteEnergyQuery": "DELETE FROM EnergyConsumptionTable WHERE IdForRow = @IdForRow",
+
+  "updateEnergyQuery": "UPDATE EnergyConsumptionTable SET SerialNo = @SerialNo, TesterName = @TesterName WHERE SerialNo = @oldSerialNo ",
+
+  "checkUsernameQuery": "SELECT PasswordHashed FROM EnergyConsumptionUsersTable WHERE Username = @username",
+
+  "fetchEnergyDataQuery": "SELECT * FROM EnergyConsumptionTable WHERE SerialNo LIKE @SerialNo + '%' ORDER BY DateColumn,ID;",
+
+  "fetchExactMatchSerialNoQuery": "SELECT DISTINCT TOP 10 SerialNo FROM EnergyConsumptionTable WHERE SerialNo LIKE '%' + @SerialNo + '%' AND SerialNo LIKE 'ss%' AND LEN(SerialNo) > 20 AND LEN(SerialNo) < 22 ORDER BY SerialNo;",
+
+  "fetchColumnNamesQuery": "SELECT COLUMN_NAME FROM INFORMATION_SCHEMA.COLUMNS WHERE TABLE_NAME=@tableName",
+
+  "insertFromMdbQuery": "IF NOT EXISTS (SELECT * FROM EnergyConsumptionTable WHERE SerialNo = @SerialNo AND ID = @ID AND TIID = @TIID AND TIName = @TIName AND ConditionSet = @ConditionSet AND ConditionOut = @ConditionOut AND ConditionFormat = @ConditionFormat AND ConditionUnit = @ConditionUnit AND ResultMin = @ResultMin AND ResultMax = @ResultMax AND ResultConditionUnit = @ResultConditionUnit AND ResultValue = @ResultValue AND ResultFormat = @ResultFormat AND ResultUnit = @ResultUnit AND TestStateID = @TestStateID AND TestState = @TestState AND TestTimeSet = @TestTimeSet AND TestTime = @TestTime AND TestTimeFormat = @TestTimeFormat AND TestTimeUnit = @TestTimeUnit AND [LineNo] = @LineNo AND DateColumn = @DateColumn AND UploadType=@UploadType) BEGIN INSERT INTO EnergyConsumptionTable (SerialNo,ID,TIID,TIName,ConditionSet,ConditionOut,ConditionFormat,ConditionUnit,ResultMin,ResultMax,ResultConditionUnit,ResultValue,ResultFormat,ResultUnit,TestStateID,TestState,TestTimeSet,TestTime,TestTimeFormat,TestTimeUnit,[LineNo],DateColumn,UploadType) VALUES (@SerialNo,@ID,@TIID,@TIName,@ConditionSet,@ConditionOut,@ConditionFormat,@ConditionUnit,@ResultMin,@ResultMax,@ResultConditionUnit,@ResultValue,@ResultFormat,@ResultUnit,@TestStateID,@TestState,@TestTimeSet,@TestTime,@TestTimeFormat,@TestTimeUnit,@LineNo,@DateColumn,@UploadType) END",
+
+  "fetchLanguageQuery": "SELECT * FROM LanguageTable WHERE Language = @language",
+
+  "updateEvaporatorPan": "UPDATE EnergyConsumptionTable SET EvaporatorPan = @EvaporatorPan ,TesterName = @TesterName WHERE SerialNo = @SerialNo;"
+}

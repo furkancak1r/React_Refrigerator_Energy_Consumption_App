@@ -1,0 +1,71 @@
+/* Modal arka plan rengini değiştirmek için */
+.my-input-modal .modal-content {
+  background-color: #1f222c;
+}
+
+/* Modal başlık rengini değiştirmek için */
+.my-input-dialog .modal-header {
+  background-color: #1f222c;
+  color: whitesmoke;
+}
+
+/* Modal altbilgi rengini değiştirmek için */
+.my-input-dialog .modal-footer {
+  background-color: #1f222c;
+  color: whitesmoke;
+}
+.my-input-modal .modal-body {
+  color: whitesmoke;
+}
+
+.btn-secondary {
+  --bs-btn-bg: #272829;
+  --bs-btn-hover-bg: whitesmoke;
+  --bs-btn-border-color: whitesmoke;
+  color: #fff;
+  --bs-btn-hover-color: #000;
+}
+.btn-primary {
+  --bs-btn-bg: rgb(51, 1, 18);
+  --bs-btn-hover-bg: whitesmoke;
+  --bs-btn-border-color: whitesmoke;
+  color: #fff;
+  --bs-btn-hover-border-color: whitesmoke;
+  --bs-btn-hover-color: #000;
+}
+
+.dropdown-tester .dropdown-item {
+  color: whitesmoke;
+  border: 1px solid whitesmoke;
+  border-radius: 3px;
+  display: flex;
+  justify-content: center;
+
+  font-size: 0.85rem;
+  --bs-dropdown-link-active-bg: none;
+}
+.dropdown-tester .dropdown-toggler {
+  background-color: #1f222c;
+  border-color: whitesmoke;
+  position: relative;
+  width: auto;
+  white-space: normal;
+  text-align: left;
+}
+
+.dropdown-tester .dropdown-toggler:focus {
+  background-color: #1f222c;
+  border-color: whitesmoke;
+}
+.dropdown-tester .dropdown-toggler:hover {
+  /* lighter background color than focus */
+  background-color: whitesmoke;
+  color: #000;
+}
+.dropdown-tester .dropdown-item:hover {
+  background-color: whitesmoke;
+  color: black;
+}
+.dropdown-tester .dropdown-menu {
+  background-color: #1f222c;
+}

@@ -1,0 +1,112 @@
+/* table.css */
+
+.table {
+  --bs-table-bg: transparent;
+  --bs-table-color: #ffffff;
+  max-width: 90%;
+  margin: 0 auto;
+  margin-top: 6vh;
+  overflow-y: auto;
+  max-height: 50vh;
+  white-space: nowrap;
+  z-index: 1;
+}
+/* Sadece Chrome için */
+::-webkit-scrollbar {
+
+  width: 12px; /* Scrollbar genişliği */
+}
+
+
+::-webkit-scrollbar-track {
+  background: black; /* Scrollbar yolu arkaplan rengi */
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: rgb(63, 62, 62); /* Scrollbar üzerindeki başlık rengi */
+
+}
+
+.scaled-table {
+  width: 100%;
+  top: 0;
+}
+@media screen and (max-width: 599px) {
+  .table {
+    overflow-x: auto; /* Yatay scrollbar eklemek için */
+    margin-bottom: 40px;
+  }
+}
+
+.mobilAdminInput {
+  max-width: 55.66px !important;
+  max-height: 55.2px !important;
+}
+
+/* Tüm sütunlar için genel stil */
+.table th,
+.table td {
+  text-align: center;
+  padding: 10px; /* Diğer sütunlar için varsayılan padding */
+  height: 35px;
+  width: 115px;
+  top: 0;
+}
+
+.loading-message {
+  position: absolute;
+  top: 55%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 16px;
+}
+.table input {
+  width: 21ch;
+  min-width: 10ch;
+  max-width: 21ch;
+  max-height: 30px;
+  background: none;
+  border: whitesmoke 1px solid;
+  color: whitesmoke;
+  text-align: center;
+}
+.bi-x-lg {
+  cursor: pointer;
+  color: whitesmoke;
+}
+.table thead {
+  top: 0;
+  background: transparent;
+  color: whitesmoke; /* Text color for the fixed header */
+  z-index: 1; /* Ensures it stays above the table content */
+}
+input[type="datetime-local"]:valid {
+  color-scheme: dark;
+}
+.RenderUploadIcon-container{
+  border: 1px solid whitesmoke;
+  border-radius: 10px;
+  
+}
+.newTesterPersonButton {
+  font-weight: 500;
+  cursor: pointer;
+  border: 1px solid whitesmoke;
+  padding-left: 6px;
+  padding-right: 6px;
+  padding-top: 2px;
+  padding-bottom: 2px;
+  background: transparent;
+  color: whitesmoke;
+  border-radius: 10px;
+  text-align: center;
+
+}
+.newTesterPersonButton:hover {
+  background: whitesmoke;
+  color: black;
+}
+.zmdi-upload{
+  cursor: pointer;
+  margin-left: 10px;
+}

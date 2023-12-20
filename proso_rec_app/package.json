@@ -1,0 +1,54 @@
+{
+  "name": "proso_rec_app",
+  "homepage": "http://energy-consumption.prosocockpit.com/",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@testing-library/jest-dom": "^5.17.0",
+    "@testing-library/react": "^13.4.0",
+    "@testing-library/user-event": "^13.5.0",
+    "axios": "^1.5.1",
+    "bcryptjs-react": "^2.4.6",
+    "bootstrap": "^5.3.2",
+    "docx": "^8.2.3",
+    "lodash.debounce": "^4.0.8",
+    "react": "^18.2.0",
+    "react-bootstrap": "^2.9.0",
+    "react-dom": "^18.2.0",
+    "react-router": "^6.16.0",
+    "react-router-dom": "^6.18.0",
+    "react-scripts": "^5.0.1",
+    "react-toastify": "^9.1.3",
+    "react-type-animation": "^3.2.0",
+    "redocx": "^1.1.4",
+    "web-vitals": "^2.1.4",
+    "xlsx-js-style": "^1.2.0"
+  },
+  "scripts": {
+    "start": "react-scripts --openssl-legacy-provider start",
+    "build": "react-scripts --openssl-legacy-provider build"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "@types/react-router-dom": "^5.3.3",
+    "eslint-plugin-react": "^7.33.2",
+    "webpack": "^4.42.0"
+  }
+}

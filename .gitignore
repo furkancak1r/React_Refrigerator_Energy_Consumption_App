@@ -1,0 +1,16 @@
+
+*.sql
+.vscode/settings.json
+kendimeNotServerİçin.txt
+proso_rec_app/deploy.sh
+proso_rec_app_server_mysql_production/package-lock.json
+proso_rec_app_server_mysql_production/.env
+proso_rec_app_server_mysql_development/.env
+proso_rec_app_server_mysql_development/.vscode/settings.json
+proso_rec_app_server_mssql/.env
+proso_rec_app_server_mssql/.vscode/settings.json
+proso_rec_app_file_upload_service/package-lock.json
+proso_rec_app/package-lock.json
+proso_rec_app_server_mssql/package-lock.json
+proso_rec_app_server_mysql_development/package-lock.json
+proso_rec_app_server_mysql_production/.vscode/settings.json

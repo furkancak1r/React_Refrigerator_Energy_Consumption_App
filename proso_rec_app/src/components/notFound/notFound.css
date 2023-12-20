@@ -1,0 +1,52 @@
+/*======================
+    404 page
+=======================*/
+
+.page_404 {
+    height: 100vh;
+    padding: 40px 0;
+    background: linear-gradient( 140deg, rgb(0, 0, 0) 0%, rgb(29, 1, 11) 100% );;
+    font-family: "Arvo", serif;
+    display: block;
+  }
+  
+  .page_404 img {
+    width: 100%;
+  }
+  
+  .four_zero_four_bg {
+    background-image: url(https://cdn.dribbble.com/users/285475/screenshots/2083086/dribbble_1.gif);
+    height: 50vh;
+    background-position: center;
+    border-radius: 10%;
+  }
+  
+  .four_zero_four_bg h1 {
+    font-size: 80px;
+  }
+  
+  .four_zero_four_bg h3 {
+    font-size: 80px;
+  }
+  
+  .link_404 {
+    color: #000 !important;
+    padding: 10px 20px;
+    background: whitesmoke;
+    margin: 20px 0;
+    display: inline-block;
+    border-radius: 20%;
+    text-decoration: none;
+  }
+  
+  .link_404:hover {
+    transform: scale(1.2);
+    transition: transform 0.2s ease-in;
+  }
+  
+  .contant_box_404 {
+    color: whitesmoke;
+    margin-top: 20px;
+    text-align: center; /* İçeriği yatayda ortalamak için kullanılır */
+  }
+  

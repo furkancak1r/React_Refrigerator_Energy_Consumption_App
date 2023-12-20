@@ -1,0 +1,28 @@
+
+.tested-unit-button {
+  background-color: whitesmoke;
+  color: black !important;
+  border: 1px solid black !important;
+  width: 100% !important;
+}
+.tested-unit-button:hover {
+  background-color: rgb(29, 1, 11);
+  color: whitesmoke !important;
+  border: 0.5px solid whitesmoke !important;
+}
+.rendertiname-button,
+.dropdowna,.testas {
+  width: 21ch;
+}
+.dropdowna .btn-secondary{
+--bs-btn-bg: transparent;
+border: 1px solid whitesmoke;
+--bs-btn-hover-bg: whitesmoke;
+--bs-btn-hover-color: black;
+width: 100%;
+}
+
+
+.dropdowna .dropdown-menu{
+  padding-top: 0px;
+}

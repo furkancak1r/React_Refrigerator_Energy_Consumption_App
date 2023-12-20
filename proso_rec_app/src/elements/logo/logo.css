@@ -1,0 +1,18 @@
+@media screen and (min-width: 600px) {
+  .proso-logo {
+    width: 18vw;
+    height: auto;
+    z-index: 1;
+
+  }
+}
+
+@media screen and (max-width: 599px) {
+  .proso-logo {
+    width: 45vw;
+    height: auto;
+    margin-top: 10px;
+    z-index: 1;
+
+  }
+}

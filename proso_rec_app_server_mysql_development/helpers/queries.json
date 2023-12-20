@@ -1,0 +1,33 @@
+{
+  "getLatestRowQuery": "SELECT * FROM energyconsumptiontable WHERE SerialNo = ? AND DateColumn = (SELECT MAX(DateColumn) FROM energyconsumptiontable WHERE SerialNo = ?) ORDER BY DateColumn DESC;",
+
+  "insertEnergyQuery": "INSERT INTO energyconsumptiontable (TesterName,SerialNo,ResultMin,ResultMax,TIName,ConditionSet,ConditionUnit,ResultConditionUnit,ResultValue,ResultUnit,TestTimeSet,TestTimeUnit,EvaporatorPan,DateColumn,UploadType) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?);",
+
+  "deleteEnergyQuery": "DELETE FROM energyconsumptiontable WHERE IdForRow = ?",
+
+  "updateEnergyQuery": "UPDATE energyconsumptiontable SET SerialNo = ?, TesterName = ? WHERE SerialNo = ? ",
+
+  "checkUsernameQuery": "SELECT PasswordHashed FROM energyconsumptionuserstable WHERE Username = ?",
+
+  "fetchEnergyDataQuery": "SELECT * FROM energyconsumptiontable WHERE SerialNo LIKE CONCAT(?, '%') ORDER BY DateColumn,ID;",
+
+  "fetchExactMatchSerialNoQuery": "SELECT DISTINCT SerialNo FROM energyconsumptiontable WHERE SerialNo LIKE CONCAT('%', ?, '%') AND SerialNo LIKE 'ss%' AND LENGTH(SerialNo) > 20 ORDER BY SerialNo LIMIT 10;",
+
+  "fetchColumnNamesQuery": "SELECT COLUMN_NAME FROM INFORMATION_SCHEMA.COLUMNS WHERE TABLE_NAME=?",
+
+  "insertFromMdbQuery": "INSERT INTO energyconsumptiontable (SerialNo,ID,TIID,TIName,ConditionSet,ConditionOut,ConditionFormat,ConditionUnit,ResultMin,ResultMax,ResultConditionUnit,ResultValue,ResultFormat,ResultUnit,TestStateID,TestState,TestTimeSet,TestTime,TestTimeFormat,TestTimeUnit,LineNo,DateColumn,UploadType) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?);",
+
+  "fetchLanguageQuery": "SELECT * FROM languagetable WHERE Language = ?",
+
+  "updateEvaporatorPan": "UPDATE energyconsumptiontable SET EvaporatorPan = ?, TesterName = ? WHERE SerialNo = ?;",
+  
+  "updateEvaporatorPanForAdmin": "UPDATE energyconsumptiontable SET EvaporatorPan = ? WHERE SerialNo = ?;",
+
+  "checkExistingRowQuery": "SELECT * FROM energyconsumptiontable WHERE SerialNo = ? AND DateColumn = ?;",
+
+  "fetchTesterNamesQuery": "SELECT * FROM testernamestable;",
+
+  "addNewTesterNameQuery": "INSERT INTO testernamestable (TesterName) VALUES (?);",
+
+  "deleteTesterNameQuery": "DELETE FROM testernamestable WHERE TesterName = ?;"
+}

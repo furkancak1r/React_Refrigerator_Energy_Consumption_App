@@ -1,0 +1,10 @@
+.signature {
+    position: fixed;
+    bottom: 20px;
+    left: 0;
+    right: 0;
+    text-align: center;
+    color: whitesmoke;
+    font-size: 12px;
+    opacity: 0.35;
+  }

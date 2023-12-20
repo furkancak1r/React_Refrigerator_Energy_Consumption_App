@@ -1,0 +1,38 @@
+.list-group-container {
+  margin-top: 5px;
+  overflow-y: auto;
+  max-height: 105px;
+
+  position: absolute;
+  width: 200px;
+  font-size: 14px;
+  left: 3px;
+  z-index: 1;
+
+}
+.list-group {
+  --bs-list-group-bg: linear-gradient(
+    140deg,
+    rgb(0, 0, 0) 0%,
+    rgb(29, 1, 11) 100%
+  );
+  --bs-list-group-color: whitesmoke;
+}
+.list-group-item {
+  cursor: pointer;
+}
+.list-group-item:hover {
+  --bs-list-group-bg: whitesmoke;
+  color: black;
+}
+::-webkit-scrollbar {
+  width: 12px; /* Scrollbar genişliği */
+}
+
+::-webkit-scrollbar-track {
+  background: transparent; /* Scrollbar yolu arkaplan rengi */
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: whitesmoke; /* Scrollbar üzerindeki başlık rengi */
+}

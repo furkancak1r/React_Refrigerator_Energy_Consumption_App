@@ -1,0 +1,110 @@
+/* searchElement.css */
+.cntr {
+  text-align: center;
+  margin-top: 8vh;
+  height: 90px;
+  z-index: 1;
+}
+
+#inpt_search:focus {
+  outline: none;
+  caret-color: whitesmoke;
+}
+@media screen and (max-width: 599px) {
+  .cntr.isInputActive {
+    margin-left: -55px;
+  }
+  .search.active,
+  .search:hover {
+    width: 200px;
+    margin-right: 0px;
+    transform: translateX(-2%) !important;
+  }
+  .adminLoginMobil.active,
+  .adminLoginMobil:hover {
+    width: 150px !important;
+    margin-right: 0px;
+    transform: translateX(-35%) !important;
+  }
+  .translateX-22:active,
+  .translateX-22:hover {
+    transform: translateX(-10%) !important;
+  }
+}
+
+.search {
+  display: inline-block;
+  position: relative;
+  height: 35px;
+  width: 35px;
+  box-sizing: border-box;
+  margin: 0px 8px 7px 0px;
+  padding: 7px 9px 0px 9px;
+  border: 3px solid #ffffff;
+  border-radius: 25px;
+  transition: all 200ms ease;
+  cursor: text;
+}
+
+.search:after {
+  content: "";
+  position: absolute;
+  width: 3px;
+  height: 20px;
+  right: -5px;
+  top: 21px;
+  background: #ffffff;
+  border-radius: 3px;
+  transform: rotate(-45deg);
+  transition: all 200ms ease;
+  pointer-events: none;
+}
+
+.search.active,
+.search:hover {
+  width: 200px;
+  margin-right: 0px;
+  transform: translateX(-12%);
+}
+
+.search.active:after,
+.search:hover:after {
+  height: 0px;
+}
+.translateX-22.active,
+.translateX-22:hover {
+  transform: translateX(-22%);
+}
+.loginSuccess.active,
+.loginSuccess:hover {
+  transform: translateX(-44%);
+}
+.search input {
+  width: 100%;
+  border: none;
+  box-sizing: border-box;
+  font-family: Helvetica;
+  font-size: 15px;
+  color: inherit;
+  background: transparent;
+  outline-width: 0px;
+  position: relative;
+  top: -5px;
+  padding-right: 20px;
+}
+.definition {
+  display: none;
+  margin-top: 5px;
+}
+.definition.works {
+  display: block;
+}
+.zmdi-plus-circle-o {
+  color: whitesmoke;
+  display: none;
+  position: absolute;
+  top: -2px;
+  right: -70px;
+  cursor: pointer;
+  max-width: 23px;
+}
