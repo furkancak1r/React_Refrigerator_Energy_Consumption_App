@@ -105,12 +105,10 @@ function fetchTableForUser(req, res) {
         const allEvaporatorPanZero = resultData.every(
           (row) => row.EvaporatorPan === 0
         );
-          console.log(resultData);
         if (allEvaporatorPanZero) {
           // EvaporatorPan kolonunu sil
           resultData.forEach((row) => delete row.EvaporatorPan);
         }
-        console.log(resultData);
 
         return res.status(200).json(resultData);
       } else {

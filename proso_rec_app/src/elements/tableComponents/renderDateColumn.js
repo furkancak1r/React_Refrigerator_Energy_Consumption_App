@@ -12,7 +12,6 @@ const getDate = (isoDateString) => {
     hour12: false,
     timeZone: "Europe/Istanbul", // Türkiye'nin zaman dilimi
   };
-  console.log(Intl.DateTimeFormat().resolvedOptions().timeZone);
 
   const formattedDate = isoDate.toLocaleString("tr-TR", options);
   return formattedDate;

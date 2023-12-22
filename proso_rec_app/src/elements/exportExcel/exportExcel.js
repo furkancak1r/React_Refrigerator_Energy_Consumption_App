@@ -105,7 +105,6 @@ export default function ExportExcel(data, serialNumber, loginInfo) {
     //   }));
     // }
     // const rowHeights = fitToRow([headers, headers2, ...body]);
-
     const colWidths = fitToColumn([headers, headers2, ...body]);
     // Calculate row heights
 
@@ -115,7 +114,7 @@ export default function ExportExcel(data, serialNumber, loginInfo) {
 
     const range = {
       s: { r: 0, c: 0 },
-      e: { r: body.length, c: body[0].length - 1 },
+      e: { r: body.length +1, c: body[0].length - 1 },
     };
 
     for (let R = range.s.r; R <= range.e.r; ++R) {
