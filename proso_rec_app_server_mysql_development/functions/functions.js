@@ -308,23 +308,38 @@ async function addDataToEnergyConsumptionTable(buffer, fileName) {
       let combinedDateTime = `${extractedDate} ${systemTime}`;
       var parts = combinedDateTime.split(/[-\s:]/);
       var year = parseInt(parts[2]);
-      var month = parseInt(parts[1]) - 1;
+      var month = parseInt(parts[1]) - 1; // JavaScript'te aylar 0'dan başlar (0 = Ocak)
       var day = parseInt(parts[0]);
       var hour = parseInt(parts[3]);
       var minute = parseInt(parts[4]);
       var second = parseInt(parts[5]);
-
+    
       var date = new Date(year, month, day, hour, minute, second);
-
-      return date.toISOString().slice(0, 19).replace("T", " ");
+    
+      // Yerel saat formatında tarih döndür
+      var formattedDate = [
+        date.getFullYear(),
+        padTo2Digits(date.getMonth() + 1),
+        padTo2Digits(date.getDate()),
+      ].join('-') + ' ' + [
+        padTo2Digits(date.getHours()),
+        padTo2Digits(date.getMinutes()),
+        padTo2Digits(date.getSeconds()),
+      ].join(':');
+    
+      return formattedDate;
     }
+    
+    function padTo2Digits(num) {
+      return num.toString().padStart(2, '0');
+    }
+    
 
     try {
       await Promise.all(
         data.map(async (row) => {
           let systemTime = row.SystemTime;
           let dateValue = getDate(extractedDate, systemTime);
-
           // Check if a row with the same SerialNo and DateColumn already exists
           const [existingRows] = await pool.execute(checkExistingRowQuery, [
             row.SerialNo,
