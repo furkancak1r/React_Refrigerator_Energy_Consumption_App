@@ -248,9 +248,14 @@ export default function Table() {
 
     handleInputClose();
     const value = data[0].EvaporatorPan;
+
+    const areAllTesterNamesFilled = data.every(
+      (item) => item.TesterName && item.TesterName.trim() !== ""
+    );
+
     const testerNameNew = testerName || data[0].TesterName;
     let result = "";
-    if (serialNumber && testerNameNew && !data[0].TesterName) {
+    if (serialNumber && testerNameNew && !areAllTesterNamesFilled) {
       result = await evaporatorPanUpdateFn(serialNumber, value, testerNameNew);
       if (result) {
         toast.success(
