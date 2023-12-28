@@ -9,7 +9,7 @@ import evaporatorPanUpdateFn from "../../api/evaporatorPanUpdate";
 import { TypeAnimation } from "react-type-animation";
 import { toast } from "react-toastify";
 import fetchTesterNames from "../../api/fetchTesterNames";
-
+import BubbleBackground from "../../components/bubbleBackground/bubbleBackground";
 export default function SearchElement() {
   const [isInputActive, setIsInputActive] = useState(false);
   const [inputValue, setInputValue] = useState("");
@@ -55,6 +55,8 @@ export default function SearchElement() {
       setInputValue("");
       setAddIconClicked(false);
       Table.setSerialNumberFn("");
+      BubbleBackground.setSerialNumberFn("");
+
     }
   };
 
@@ -117,6 +119,7 @@ export default function SearchElement() {
   const handleSearchIcon = () => {
     if (inputValue.length > 7) {
       Table.setSerialNumberFn(inputValue);
+      BubbleBackground.setSerialNumberFn(inputValue);
       setIshandleInputChangeExecuted(true);
     } else {
       toast.error(languageData.InputControl);
@@ -139,6 +142,7 @@ export default function SearchElement() {
     setInputValue("");
     setIsInputActive(false);
     Table.setSerialNumberFn("");
+    BubbleBackground.setSerialNumberFn("");
     setAddIconClicked(false);
     Table.setIsAddIconClickedFn(false);
     Table.setIsEditTesterNamesClickedFn(false);
@@ -218,6 +222,7 @@ export default function SearchElement() {
   const handleChangeInputValueFromSearchList = (value) => {
     setInputValue(value);
     Table.setSerialNumberFn(value);
+    BubbleBackground.setSerialNumberFn(value);
     setIshandleInputChangeExecuted(true);
   };
 

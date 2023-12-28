@@ -1,14 +1,19 @@
-import React from "react";
+import React, { useState } from "react";
 import "./bubbleBackground.css";
 import { useAuth } from "../../authContext/authContext";
+
 export default function BubbleBackground() {
+  const [serialNumber, setSerialNumber] = useState("");
+
   const { loginInfo } = useAuth();
   const getRandomSize = () => {
     const size = Math.floor(Math.random() * 60) + 50; // Random size between 50px and 150px
     return size;
   };
-
-  if (loginInfo === "testtakimi") {
+  BubbleBackground.setSerialNumberFn = (newSerialNumber) => {
+    setSerialNumber(newSerialNumber);
+  };
+  if (loginInfo === "testtakimi" || serialNumber || serialNumber !== "") {
     return null;
   } else {
     return (
