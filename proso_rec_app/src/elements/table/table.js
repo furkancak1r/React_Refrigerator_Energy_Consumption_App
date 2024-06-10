@@ -288,6 +288,12 @@ export default function Table() {
 
   return (
     <div className={"table d-flex flex-column"}>
+      {!loading && (data.length > 0 || isEditTesterNamesClicked || isAddIconClickedTable) && (
+        <div className="status-header">
+          {languageData.StatusHeader + ": " + languageData.Status}
+        </div>
+      )}
+  
       <ConfirmationModal
         show={showModal}
         handleClose={handleClose}
@@ -306,7 +312,7 @@ export default function Table() {
         title="Onaylıyor musunuz?"
         message={"Tablo excel olarak indirilecektir."}
       />
-
+  
       <RenderForm
         visualData={visualData}
         languageData={languageData}
@@ -316,7 +322,7 @@ export default function Table() {
         loginInfo={loginInfo}
         handleUploadRow={handleUploadRow}
       />
-
+  
       {!loading ? (
         data.length > 0 || isEditTesterNamesClicked || isAddIconClickedTable ? (
           <table className="scaled-table">
@@ -335,7 +341,7 @@ export default function Table() {
                       <th scope="col">{languageData.Delete}</th>
                     </>
                   )}
-
+  
                 {!isAddIconClickedTable && (
                   <>
                     {loginSuccess && (
@@ -368,7 +374,7 @@ export default function Table() {
                       ) && <th scope="col">{languageData.EvaporatorPan}</th>}
                   </>
                 )}
-
+  
                 {loginSuccess &&
                   loginInfo === "admin" &&
                   !isAddIconClickedTable &&
@@ -408,4 +414,7 @@ export default function Table() {
       )}
     </div>
   );
-}
+  
+  
+  
+};

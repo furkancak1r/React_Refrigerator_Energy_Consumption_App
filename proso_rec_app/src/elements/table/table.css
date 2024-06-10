@@ -110,3 +110,17 @@ input[type="datetime-local"]:valid {
   cursor: pointer;
   margin-left: 10px;
 }
+
+.status-header {
+  position: sticky;
+  top: 0;
+  right: 0;
+  left: 0; /* Sol tarafa sıfırla */
+  width: 100%; /* Genişliği tam olarak ayarla */
+  padding-bottom: 10px;
+  text-align: right; /* Metni sağa yasla */
+  font: 16px system-ui, -apple-system, "Segoe UI", sans-serif;
+  font-weight: bold;    
+  border-bottom: 1px solid whitesmoke;
+
+}

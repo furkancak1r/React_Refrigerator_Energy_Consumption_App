@@ -1,7 +1,7 @@
 {
   "getLatestRowQuery": "SELECT * FROM energyconsumptiontable WHERE SerialNo = ? AND DateColumn = (SELECT MAX(DateColumn) FROM energyconsumptiontable WHERE SerialNo = ?) ORDER BY DateColumn DESC;",
 
-  "insertEnergyQuery": "  INSERT INTO energyconsumptiontable (TesterName,SerialNo,ResultMin,ResultMax,TIName,ConditionSet,ConditionUnit,ResultConditionUnit,ResultValue,ResultUnit,TestTimeSet,TestTimeUnit,EvaporatorPan,DateColumn,UploadType) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?);",
+  "insertEnergyQuery": "INSERT INTO energyconsumptiontable (TesterName,SerialNo,ResultMin,ResultMax,TIName,ConditionSet,ConditionUnit,ResultConditionUnit,ResultValue,ResultUnit,TestTimeSet,TestTimeUnit,EvaporatorPan,DateColumn,UploadType) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?);",
 
   "deleteEnergyQuery": "DELETE FROM energyconsumptiontable WHERE IdForRow = ?",
 
@@ -11,7 +11,7 @@
 
   "fetchEnergyDataQuery": "SELECT * FROM energyconsumptiontable WHERE SerialNo LIKE CONCAT(?, '%') ORDER BY DateColumn,ID;",
 
-  "fetchExactMatchSerialNoQuery": "SELECT DISTINCT SerialNo FROM energyconsumptiontable WHERE SerialNo LIKE CONCAT('%', ?, '%') AND SerialNo LIKE 'ss%' AND LENGTH(SerialNo) > 20 ORDER BY SerialNo LIMIT 10;",
+  "fetchExactMatchSerialNoQuery": "SELECT DISTINCT SerialNo FROM energyconsumptiontable WHERE SerialNo LIKE CONCAT('%', ?, '%') AND SerialNo LIKE 'SS%' ORDER BY SerialNo LIMIT 10;",
 
   "fetchColumnNamesQuery": "SELECT COLUMN_NAME FROM INFORMATION_SCHEMA.COLUMNS WHERE TABLE_NAME=?",
 

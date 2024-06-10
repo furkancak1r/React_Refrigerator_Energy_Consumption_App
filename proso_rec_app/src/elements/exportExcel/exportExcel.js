@@ -65,6 +65,7 @@ export default function ExportExcel(data, serialNumber, loginInfo) {
       ...(data.every((item) => item.EvaporatorPan)
         ? ["Evap. Pan Checked"]
         : []),
+      "Test Passed",
     ];
 
     const headers2 = [

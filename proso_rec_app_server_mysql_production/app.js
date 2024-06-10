@@ -49,7 +49,7 @@ app.options("*", (req, res) => {
 
 app.use(bodyParserMiddleware);
 app.use(fileUpload());
-app.set('trust proxy',1);
+
 app.post("/api/login", async (req, res) => {
   loginFn(req, res);
 });

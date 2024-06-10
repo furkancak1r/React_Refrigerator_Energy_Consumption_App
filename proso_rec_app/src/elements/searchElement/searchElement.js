@@ -304,7 +304,6 @@ export default function SearchElement() {
         onChange={handleInputChange}
         onKeyDown={handleSearchIconEnter}
         autoComplete="off"
-        maxLength={35}
       />
     );
   };

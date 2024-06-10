@@ -11,7 +11,7 @@
 
   "fetchEnergyDataQuery": "SELECT * FROM energyconsumptiontable WHERE SerialNo LIKE CONCAT(?, '%') ORDER BY DateColumn,ID;",
 
-  "fetchExactMatchSerialNoQuery": "SELECT DISTINCT SerialNo FROM energyconsumptiontable WHERE SerialNo LIKE CONCAT('%', ?, '%') AND SerialNo LIKE 'ss%' AND LENGTH(SerialNo) > 20 ORDER BY SerialNo LIMIT 10;",
+  "fetchExactMatchSerialNoQuery": "SELECT DISTINCT SerialNo FROM energyconsumptiontable WHERE SerialNo LIKE CONCAT('%', ?, '%') AND SerialNo LIKE 'SS%' ORDER BY SerialNo LIMIT 10;",
 
   "fetchColumnNamesQuery": "SELECT COLUMN_NAME FROM INFORMATION_SCHEMA.COLUMNS WHERE TABLE_NAME=?",
 

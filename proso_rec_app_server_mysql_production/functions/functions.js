@@ -105,7 +105,6 @@ function fetchTableForUser(req, res) {
         const allEvaporatorPanZero = resultData.every(
           (row) => row.EvaporatorPan === 0
         );
-
         if (allEvaporatorPanZero) {
           // EvaporatorPan kolonunu sil
           resultData.forEach((row) => delete row.EvaporatorPan);
@@ -335,12 +334,12 @@ async function addDataToEnergyConsumptionTable(buffer, fileName) {
       return num.toString().padStart(2, '0');
     }
     
+
     try {
       await Promise.all(
         data.map(async (row) => {
           let systemTime = row.SystemTime;
           let dateValue = getDate(extractedDate, systemTime);
-
           // Check if a row with the same SerialNo and DateColumn already exists
           const [existingRows] = await pool.execute(checkExistingRowQuery, [
             row.SerialNo,
